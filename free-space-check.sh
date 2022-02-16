@@ -13,6 +13,4 @@ if [ $freeSpaceOnDisk -le 40 ]; then
 	echo "Less than 40GB free"
 	push "WARNING: Free Space less than 40GB - stopping OpenHab"
 	systemctl stop openhab
-else
-	push "OK: Free Space is $freeSpaceOnDisk GB"
 fi
