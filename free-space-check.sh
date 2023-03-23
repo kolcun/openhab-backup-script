@@ -9,8 +9,8 @@ push () {
 
 freeSpaceOnDisk=`df -kh | grep  '^/dev/root' | awk '{ print $4 }' |  cut -d'G' -f1`
 echo "Space on disk: $freeSpaceOnDisk"
-if [ $freeSpaceOnDisk -le 40 ]; then
-	echo "Less than 40GB free"
+if [ $freeSpaceOnDisk -le 35 ]; then
+	echo "Less than 35GB free"
 	push "WARNING: Free Space less than 40GB - stopping OpenHab"
 	systemctl stop openhab
 fi
